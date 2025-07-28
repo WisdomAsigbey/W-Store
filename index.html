@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W-Stores</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid justify-content-between nav-container">
+        <div class="d-flex align-items-center">
+          <button class="navbar-toggler toggle-btn-nav border-0" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white fs-4 active"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white fs-4 active"
+                  aria-current="page"
+                  href="#"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white fs-4 active"
+                  aria-current="page"
+                  href="#"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- logo -->
+        <div class="d-lg-flex mx-auto">
+          <h2 class="navbar-brand mb-0 text-slanted fw-bold nav-logo">
+            W-Stores
+          </h2>
+        </div>
+        <!-- cart -->
+        <div class="cart-container d-flex align-items-center">
+          <button class="toggle-cart">
+            <i class="fa fa-cart-shopping"></i>
+          </button>
+          <span class="cart-count">0</span>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- hero  -->
+    <section class="hero">
+      <div class="hero-container">
+        <h1 class="text-slanted">rest, relax, enjoy</h1>
+        <h3>Your comfort zone</h3>
+        <a href="products.html" class="custom-btn hero-btn">shop now</a>
+      </div>
+    </section>
+
+    <!-- sidebar -->
+    <div class="sidebar-overlay" id="sidebar">
+      <aside class="sidebar">
+        <!-- close -->
+        <button class="sidebar-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <!-- links -->
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html" class="sidebar-link">
+              <i class="fas fa-home fa-fw"></i>
+              home
+            </a>
+          </li>
+          <li>
+            <a href="products.html" class="sidebar-link">
+              <i class="fas fa-couch fa-fw"></i>
+              products
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="sidebar-link">
+              <i class="fas fa-book fa-fw"></i>
+              about
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- cart overlay -->
+    <div class="cart-overlay">
+      <aside class="cart">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-slanted">your bag</h3>
+        </header>
+        <!-- cart items -->
+        <div class="cart-items"></div>
+
+        <footer>
+          <h3 class="cart-total text-slanted">total : $12.99</h3>
+          <button class="cart-checkout custom-btn">checkout</button>
+        </footer>
+      </aside>
+    </div>
+    <!-- featured products -->
+    <section class="section featured">
+      <div class="title">
+        <h2><span>/</span>featured</h2>
+      </div>
+      <div class="featured-center section-center">
+        <h2 class="section-loading">loading...</h2>
+        <!-- single product -->
+        <!-- <article class="product">
+          <div class="product-container">
+            <img src="./images/main-bcg.jpeg" class="product-img img" alt="" />
+            
+            <div class="product-icons">
+              <a href="product.html?id=1" class="product-icon">
+                <i class="fas fa-search"></i>
+              </a>
+              <button class="product-cart-btn product-icon" data-id="">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <footer>
+            <p class="product-name">name</p>
+            <h4 class="product-price">$19.99</h4>
+          </footer>
+        </article> -->
+        <!--end of single product -->
+      </div>
+      <button class="custom-btn d-block mx-auto">
+        <a href="products.html">all products</a>
+      </button>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer py-3">
+      <p class="text-center text-capitalize mb-0">
+        &copy; <span id="date"></span>
+        <span class="text-slanted">w-stores</span> all rights reserved
+      </p>
+    </footer>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- js -->
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
