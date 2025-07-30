@@ -6,14 +6,11 @@ const setupStore = (products) => {
   store = products.map((product) => {
     const {
       id,
-      category,
-      price,
-      image,
-      title,
-      description,
-      rating: { rate, count },
+      fields: { colors, company, name, price, featured, image: img },
     } = product;
-    return { id, category, price, image, title, description, rate, count };
+    const image = img[0].thumbnails.large.url;
+
+    return { id, colors, company, name, price, image, featured };
   });
   setStorageItem("store", store);
 };

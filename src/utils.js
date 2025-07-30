@@ -1,18 +1,23 @@
 // Fake store API (To get documentation about the API, visit search  fake store api in your browser)
-const allProductsURL = "https://fakestoreapi.com/products";
+const allProductsURL = "https://www.course-api.com/javascript-store-products";
 
-// single product URL(add product id to url)
-const singleProductURL = `https://fakestoreapi.com/products/`;
+// single product URL(add query for id parameter at end of url "?id=value")
+const singleProductURL = `https://www.course-api.com/javascript-store-single-product`;
 
 const getElement = (selection) => {
   const element = document.querySelector(selection);
-  element
-    ? element
-    : (() => {
-        throw new Error(
-          `Please check "${selection}" selector, no such element exist`
-        );
-      })();
+  if (element) return element;
+
+  throw new Error(
+    `Please check "${selection}" selector, no such element exist`
+  );
+};
+
+const formatPrice = (price) => {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format((price / 100).toFixed(2));
 };
 
 const getStorageItem = (item) => {
@@ -34,4 +39,5 @@ export {
   getStorageItem,
   setStorageItem,
   getElement,
+  formatPrice,
 };
